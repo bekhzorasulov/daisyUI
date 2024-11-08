@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body>
+    <form class="w-96 mx-auto">
+      <h1 class="text-4xl font-bold my-5 text-center mt-5 text-cyan-400">
+        Fill This Form
+      </h1>
+      <label class="form-control w-full">
+        <div class="label">
+          <span class="label-text">First Name:</span>
+        </div>
+        <input
+          type="text"
+          placeholder="Type here"
+          class="input input-bordered input-info w-full"
+          id="firstName"
+        />
+        <div class="label">
+          <span class="label-text">Age:</span>
+        </div>
+        <input
+          type="number"
+          placeholder="Type here"
+          class="input input-bordered input-info w-full"
+          id="age"
+        />
+      </label>
+      <div class="label">
+        <span class="label-text">Bio:</span>
+      </div>
+      <textarea
+        class="textarea textarea-info w-full resize-none"
+        placeholder="Bio"
+        id="bio"
+      ></textarea>
+      <button class="btn btn-info my-10 btn-block text-white">Submit</button>
+    </form>
+
+    <div class="mx-auto w-auto px-20">
+      <div class="overflow-x-auto">
+        <table class="table">
+          <!-- head -->
+          <thead>
+            <div class="div bg-cyan-400 text-center">
+              <span class="text-black">All Users:</span>
+              <span class="counter text-xl text-black"></span>
+            </div>
+            <tr>
+              <th>Name</th>
+              <th>Bio</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- TEMPLATE -->
+            <template>
+              <tr>
+                <td>
+                  <div class="flex items-center gap-3">
+                    <div class="avatar">
+                      <div class="mask mask-squircle h-12 w-12">
+                        <img
+                          src="https://img.daisyui.com/images/profile/demo/2@94.webp"
+                          alt="Avatar Tailwind CSS Component"
+                          class="avatar-image"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <div class="font-bold user-name">Hart</div>
+                      <div class="text-sm opacity-50 age">age:22</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="bio"></td>
+                <th>
+                  <button class="btn btn-error text-white btn-xs delete-btn">
+                    delete
+                  </button>
+                </th>
+              </tr>
+            </template>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>
